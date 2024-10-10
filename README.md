@@ -1,8 +1,15 @@
 # HoneyPotter
 
-##  Full disclosure - This Readme and the tool were created using AI
+##  Full disclosure - Most of this Readme and the tool were created using AI
 
-A flexible and configurable HTTP honeypot server designed to mimic various web services and log all interactions.
+A flexible and configurable HTTP honeypot server designed to mimic various web services and log all interactions. 
+
+It is designed more for bots that are scanning than it is to trick a human, to do this we would need to host a variety of JS/CSS files etc. This might be something we could look to do in future though.
+
+## Future Plan
+
+I want to add more config files that more accurately imitate the behaviours of various services. 
+
 ## Features
 
 - Highly configurable through JSON configuration files
