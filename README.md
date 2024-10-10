@@ -19,7 +19,7 @@ A flexible and configurable HTTP honeypot server designed to mimic various web s
 
 ## Installation
 
-1. Clone this repository or download the `generic_honeypot.py` script.
+1. Clone this repository or download the `honeypotter.py` script.
 2. Ensure you have Python 3.6 or higher installed.
 
 ## Usage
@@ -27,7 +27,7 @@ A flexible and configurable HTTP honeypot server designed to mimic various web s
 Run the honeypot server using the following command:
 
 ```
-python generic_honeypot.py -p <port> -c <config_file> [--ssl]
+python honeypotter.py -p <port> -c <config_file> [--ssl]
 ```
 
 Arguments:
