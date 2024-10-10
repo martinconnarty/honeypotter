@@ -4,11 +4,11 @@
 
 A flexible and configurable HTTP honeypot server designed to mimic various web services and log all interactions. 
 
-It is designed more for bots that are scanning than it is to trick a human, to do this we would need to host a variety of JS/CSS files etc which could without careful implementation lead to security issues of its own.
+It is designed more for bots that are scanning than it is to trick a human, to do this we would need to host a variety of JS/CSS files etc which could without careful implementation lead to security issues of its own. 
 
 ## Future Plan
 
-- Test for vulnerabilities in this tool itself! 
+- Test for vulnerabilities in this tool itself! Although, as a honeypot it would be advisable to treat this as something which will get pwned.
 
 - I want to add more config files that more accurately imitate the behaviours of various services. 
 
