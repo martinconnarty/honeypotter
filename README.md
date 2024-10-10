@@ -4,7 +4,7 @@
 
 A flexible and configurable HTTP honeypot server designed to mimic various web services and log all interactions. 
 
-It is designed more for bots that are scanning than it is to trick a human, to do this we would need to host a variety of JS/CSS files etc. This might be something we could look to do in future though.
+It is designed more for bots that are scanning than it is to trick a human, to do this we would need to host a variety of JS/CSS files etc which could without careful implementation lead to security issues of its own.
 
 ## Future Plan
 
