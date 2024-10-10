@@ -8,7 +8,7 @@ It is designed more for bots that are scanning than it is to trick a human, to d
 
 ## Future Plan
 
-- Check for vulnerabilities in this tool itself! 
+- Test for vulnerabilities in this tool itself! 
 
 - I want to add more config files that more accurately imitate the behaviours of various services. 
 
