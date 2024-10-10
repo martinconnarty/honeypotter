@@ -1,7 +1,8 @@
 # HoneyPotter
 
-A flexible and configurable HTTP honeypot server designed to mimic various web services and log all interactions. Full disclosure - This Readme and the tool were created using AI
+##  Full disclosure - This Readme and the tool were created using AI
 
+A flexible and configurable HTTP honeypot server designed to mimic various web services and log all interactions.
 ## Features
 
 - Highly configurable through JSON configuration files
