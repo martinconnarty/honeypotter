@@ -1,0 +1,76 @@
+{
+    "server_name": "Microsoft-IIS/10.0",
+    "auth": {
+        "username": "admin",
+        "password": "password123"
+    },
+    "ssl": {
+        "keyfile": "path/to/your/key.pem",
+        "certfile": "path/to/your/cert.pem"
+    },
+    "responses": {
+        "^owa/?$": {
+            "GET": {
+                "status_code": 302,
+                "headers": {
+                    "Location": "/owa/auth/logon.aspx?url=https://mail.example.com/owa/&reason=0"
+                }
+            }
+        },
+        "^owa/auth/logon.aspx": {
+            "GET": {
+                "status_code": 200,
+                "headers": {
+                    "Content-Type": "text/html"
+                },
+                "body": "<html><head><title>Outlook Web App</title></head><body><form method='post'><input type='text' name='username'><input type='password' name='password'><input type='submit' value='Sign in'></form></body></html>"
+            },
+            "POST": {
+                "status_code": 302,
+                "headers": {
+                    "Location": "/owa/"
+                }
+            }
+        },
+        "^ecp/?$": {
+            "GET": {
+                "status_code": 302,
+                "headers": {
+                    "Location": "/ecp/auth/logon.aspx?url=https://mail.example.com/ecp/&reason=0"
+                }
+            }
+        },
+        "^Microsoft-Server-ActiveSync/?$": {
+            "GET": {
+                "status_code": 401,
+                "headers": {
+                    "WWW-Authenticate": "Basic realm=\"Exchange Server\""
+                }
+            },
+            "POST": {
+                "auth_required": true,
+                "status_code": 200,
+                "headers": {
+                    "Content-Type": "application/vnd.ms-sync.wbxml"
+                },
+                "body": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Autodiscover xmlns=\"http://schemas.microsoft.com/exchange/autodiscover/mobilesync/responseschema/2006\">...</Autodiscover>"
+            }
+        },
+        "^Autodiscover/Autodiscover.xml": {
+            "GET": {
+                "status_code": 401,
+                "headers": {
+                    "WWW-Authenticate": "Basic realm=\"Exchange Server\""
+                }
+            },
+            "POST": {
+                "auth_required": true,
+                "status_code": 200,
+                "headers": {
+                    "Content-Type": "application/xml"
+                },
+                "body": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Autodiscover xmlns=\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\">...</Autodiscover>"
+            }
+        }
+    }
+}
