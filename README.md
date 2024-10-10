@@ -39,7 +39,7 @@ Arguments:
 Example:
 
 ```
-python generic_honeypot.py -p 443 -c exchange_config.json --ssl
+python honeypotter.py -p 443 -c exchange.json --ssl
 ```
 
 ## Configuration
